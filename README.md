@@ -1,7 +1,6 @@
 # Environment Agency Asset Checker
 
 ## Description
----
 
 This project allows users to check whether an ID exists in the Environment Agency's Asset Management database (AIMS). This project uses Python 3.11 and the [Environment Agency's Asset Management API](https://environment.data.gov.uk/asset-management/doc/reference).
 
