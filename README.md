@@ -12,21 +12,83 @@ This project aims to solve this problem by using get requests to the Asset Manag
 <br>
 
 ## Installation
----
 
 Clone this repository using the command:
 
-`git clone git@github.com:jrmolloy2/EA-Assets.git`
+```console
+git clone git@github.com:jrmolloy2/EA-Assets.git
+```
+
+Install the requirements using the command below from the EA-Assets folder.
+
+```console
+pip install -r requirements.txt
+```
+
+Run the package using the command below from the EA-Assets folder:
+
+```console
+python -m asset_checker
+```
 
 <br>
 
 ## How to use
----
+
+This program is a command-line interface. On running, the program will prompt you to enter an asset ID.
+
+```console
+Welcome to the Asset Checker.
+Enter the asset ID:
+```
+
+The asset ID entered should be a number, otherwise you will see an error and be prompted to enter the asset ID again.
+
+```console
+Please enter a number.
+Enter the asset ID: 
+```
+
+Once you have entered a number, the program will call the Environment Agency's Asset Management API and return the asset type and geometry type.
+
+```console
+Asset type: Structure: Outfall
+Asset geometry type: Point
+```
+
+If the number entered by the user is not in the Asset Management database, an error will be printed.
+
+```console
+Enter the asset ID: 999999999999
+No asset data returned from the API.
+```
+
+The program continues on a loop, asking the user whether they want to check another asset.
+
+```console
+Do you want to check another asset ID? (Y/N)
+```
+
+If the user enters N (either upper- or lower-case), the program will end.
+
+```console
+Do you want to check another asset ID? (Y/N) n
+Thank you for using the Asset Checker.
+```
+
+<br>
+
+## Tests
+
+Unittests are available in the tests folder. These can be run using the command below from the EA-Assets folder.
+
+```console
+python -m unittest discover -v
+```
 
 <br>
 
 ## Credits
----
 
 [Environment Agency's Asset Management API](https://environment.data.gov.uk/asset-management/doc/reference)
 

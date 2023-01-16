@@ -1,8 +1,8 @@
 """Program to check whether asset IDs exist in the Environment Agency's Asset Management database."""
 
 
-from assets import CallAsset, AssetData
-from errors import InvalidAPICallError
+from asset_checker.assets import CallAsset, AssetData
+from asset_checker.errors import InvalidAPICallError
 
 
 def main():
