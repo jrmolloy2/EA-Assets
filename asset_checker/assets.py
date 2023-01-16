@@ -2,7 +2,7 @@
 
 
 import requests
-from asset_checker.errors import InvalidAPICallError
+from errors import InvalidAPICallError
 
 
 ROOT = "http://environment.data.gov.uk/asset-management"
